@@ -1,0 +1,6 @@
+*.bam
+*.bai
+.results/*.bed
+.nextflow/*
+.nextflow
+.Rhistory
