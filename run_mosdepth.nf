@@ -4,12 +4,12 @@
 // nextflow run run_mosdepth.nf -c run_mosdepth.config
 // Generates mosdepth output for QC
 
-params.panels   = "/illumina/runs_diag/prod_pipeline/refs/interval_files/filtexlister/2022/**.BED"
+params.panels   = "/illumina/analysis/prod_pipeline/refs/interval_files/filtexlister/2022/**.BED"
 params.bams     = "./bams/*.bam"
 params.bais     = "./bams/*.bai"
 // params.twistbed = '/illumina/runs_diag/prod_pipeline/refs/interval_files/twist/Twist_Exome_plus_RefSeq_Gencode_targets_Hg19.liftover.bed'
-params.twistbed = '/illumina/runs_diag/prod_pipeline/refs/interval_files/twist/Ikke_i_bruk_TWIST_2_0/hg19_Twist_exome_2_1_annotated_targets_sorted.bed'
-params.utrbed   = '/illumina/runs_diag/prod_pipeline/refs/interval_files/utr/UTR_combined_selected_noncoding.bed'
+params.twistbed = '/illumina/analysis/prod_pipeline/refs/interval_files/twist/TWIST_2_0/hg19_Twist_exome_2_1_annotated_targets_sorted.bed'
+params.utrbed   = '/illumina/analysis/prod_pipeline/refs/interval_files/utr/UTR_combined_selected_noncoding.bed'
 params.outdir   = './results'
 
 // Iterate all panels

@@ -15,7 +15,7 @@ g = function(g) {
 panelfiles <- list.files(path="./results", pattern="*thresholds.bed", full.names=TRUE, recursive=FALSE)
 
 # Mosdepth må være kjørt først - angi resultatmappen:
-data_dir <- "Z:/dev/2022/panelevaluator/results/"
+data_dir <- "/illumina/analysis/dev/2022/mfahls/panelevaluator/results"
 
 # hent parameter til col_types og col_names
 c_t <- "ciic"
@@ -58,7 +58,7 @@ for(i in 1:length(panelfiles)) {
   # Regions below 1X print
   write.table("Region som inneholder baser med 1X eller mindre:",file=file, sep="\t", row.names=FALSE, col.names = FALSE, append = TRUE)
   thresholds %>% 
-    filter(source == p & diff != 0) %>% 
+    filter(diff != 0) %>% 
     select(-source, -("1":as.character(numsamples)),-mean) %>% 
     write.table(file=file , sep="\t", row.names=FALSE, col.names = FALSE, append = TRUE)
 }
